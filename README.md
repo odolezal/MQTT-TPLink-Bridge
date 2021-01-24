@@ -10,8 +10,8 @@ Since the "Light" and "Plug" devices have slightly different JSON parameters, th
 Change for: `plug` group. 
 
 Instead of handling `/on` or `/off` part of MQTT topic, script handling incoming (published) messages:
-* Message: "1" = plug on
-* Message: "0" = plug off
+* Message: `1` = plug on
+* Message: `0` = plug off
 
 Base topic is: `tplinkbridge/plug/<name>`
 
