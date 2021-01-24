@@ -1,6 +1,6 @@
  {
    "debug": true,
-   "mqtt_broker": "http://mqtt.my.io",
+   "mqtt_broker": "mqtt://10.0.0.99",
    "head": "tplinkbridge",
    "statushead": "status",
    "retries": 9,
