@@ -14,3 +14,5 @@ Instead of handling `/on` or `/off` part of MQTT topic, script handling incoming
 * Message: "0" = plug off
 
 Base topic is: `tplinkbridge/plug/<name>`
+
+If you dont want to use Docker, you can easily [deploy this project on Raspberry Pi](README-RaspberryPi.md) (or any other Debian-like system).
