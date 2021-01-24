@@ -84,8 +84,13 @@ var sendOptions = '{ "tcp" }';
 // MQTT connection options
 var copts = {
   clientId: "TPLinkBridge",
-  keepalive: 20000
+  keepalive: 20000,
+  // MQTT broker authentisation
+  username: "mqtt_broker_username",
+  password: "mqtt_broker_password",
+  clientId: "tplinkbridge"
 };
+
 
 //-----------------------------------------------------------------------------
 //-----------------------[   MQTT Stuff   ]------------------------------------
@@ -118,13 +123,19 @@ client.on('message', function(topic, message) {
     //
     //  Process Topic/commands
     //
+    // Change for: "plug" group.
+    // Instead of handling "/on" or "/off" part of MQTT topic
+    // script handling incoming (published) messages:
+    // Message: "1" = plug on
+    // Message: "0" = plug off
+    // Base topic is: "tplinkbridge/plug/<name>"
     switch (ttmp[1]) {
       case "plug":
         if (ttmp[3] == "state") {
           getPlugStatus(ttmp[2]);
-        } else if (ttmp[3] == "on") {
+        } else if (message == "1") {
           setPlugPower(ttmp[2], true, config.retries);
-        } else if (ttmp[3] == "off") {
+        } else if (message == "0") {
           setPlugPower(ttmp[2], false, config.retries);
         }
         break;
@@ -282,4 +293,3 @@ function getLightStatus(name) {
     }
   });
 }
-
