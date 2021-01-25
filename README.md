@@ -7,9 +7,9 @@ Since the "Light" and "Plug" devices have slightly different JSON parameters, th
 
 ## Changes
 
-Change for: `plug` group. 
+* Added MQTT broker authentisation.
 
-Instead of handling `/on` or `/off` part of MQTT topic, script handling incoming (published) messages:
+Change for: `plug` group. Instead of handling `/on` or `/off` part of MQTT topic, script handling incoming (published) messages:
 * Message: `1` = plug on
 * Message: `0` = plug off
 
