@@ -9,7 +9,7 @@ RUN npm install
 
 COPY mqtttplinkbridge.js /mqtt
 
-ADD ./config.json /mqtt/config/
+ADD ./config/config.json /mqtt/config/
 ADD VERSION .
 ADD Dockerfile .
 ADD build_container.sh .
