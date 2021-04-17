@@ -17,7 +17,6 @@ docker build -t jdallen/mqtttplinkbridge:$VERSION -t jdallen/mqtttplinkbridge:la
 <pre>
 docker run -d --restart=always \
   --name=mqtttplinkbridge \
-  --volume /root/Docker/tplinkbridge:/mqtt/config \
   jdallen/mqtttplinkbridge:latest
 </pre>
 
