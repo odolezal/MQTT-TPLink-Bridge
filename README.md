@@ -15,4 +15,8 @@ Change for: `plug` group. Instead of handling `/on` or `/off` part of MQTT topic
 
 Base topic is: `tplinkbridge/plug/<name>`
 
+## Deploy
+
+Follow instructions for build & run [Docker](README-Docker.md) container.
+
 If you dont want to use Docker, you can easily [deploy this project on Raspberry Pi](README-RaspberryPi.md) (or any other Debian-like system).
